@@ -1,8 +1,10 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        String str = calc("10 - 10");
+        Scanner scanner =new Scanner(System.in);
+        String str = calc(scanner.nextLine());
         System.out.println(str);
 
     }
@@ -34,6 +36,6 @@ public class Main {
             case "/": return Integer.toString(a / b);
             default: throw new Exception("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
-//        https://github.com/Vladimir24152/Calculator.git
+
     }
 }
