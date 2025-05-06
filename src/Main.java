@@ -33,7 +33,10 @@ public class Main {
             case "+": return Integer.toString(a + b);
             case "-": return Integer.toString(a - b);
             case "*": return Integer.toString(a * b);
-            case "/": return Integer.toString(a / b);
+            case "/": if (b == 0){
+                throw new Exception("throws Exception //т.к. на 0 делить нельзя");
+            }
+                return Integer.toString(a / b);
             default: throw new Exception("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
 
